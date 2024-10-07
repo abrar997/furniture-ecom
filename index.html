@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./dist/input-style.css" />
+    <link rel="stylesheet" href="./dist/output-style.css" />
+
+    <title>Shopping</title>
+  </head>
+  <body>
+    <header
+      class="font-main text-[19px] bg-orange-50 flex justify-between items-center px-20 py-6"
+    >
+      <a
+        href="/index.html"
+        class="text-3xl text-main font-serif gap-2 flex items-center"
+      >
+        <i class="fa-solid fa-igloo"></i>
+      </a>
+      <div class="flex text-black font-semibold text-lg gap-10 items-center">
+        <a href="login">Home</a>
+        <a href="login">Login</a>
+        <a href="login">Logout</a>
+        <a
+          href="login"
+          class="text-main w-12 h-12 flex items-center justify-center relative rounded-full shadow bg-slate-50 hover:bg-opacity-70 transition-all duration-300"
+          ><i class="fa-solid fa-cart-shopping"></i>
+          <span
+            class="absolute rounded-full -top-4 h-7 w-7 flex items-center justify-center -right-2 bg-main text-white font-bold border shadow"
+            >3</span
+          >
+        </a>
+      </div>
+    </header>
+
+    <main class="grid lg:gap-20 font-main">
+      <section
+        class="bg-[url('https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover"
+        style="background-size: 100%"
+      >
+        <div
+          class="grid items-center justify-center gap-3 text-center bg-[#020202a7] py-48 text-white"
+        >
+          <h3 class="font-semibold text-2xl text-gray-200 leading-3">
+            Welcome to
+          </h3>
+          <h1 class="font-bold text-6xl">Furniture Online Market</h1>
+          <p class="text-lg w-[50%] text-center m-auto text-gray-200">
+            We are dedicated to offering a carefully curated selection of
+            high-quality furniture that blends functionality with modern design
+            . Whether you're furnishing your living room, bedroom, or office,
+            our collection provides a wide variety of pieces to match your taste
+            and lifestyle .
+          </p>
+          <div
+            class="flex items-center justify-center gap-0 opacity-50 text-[#fff7ed]"
+          >
+            <img src="./assets/chair.svg" alt="" />
+            <img src="./assets/plant.svg" alt="" />
+            <img src="./assets/books.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="lg:px-20 grid items-center gap-10">
+        <h1 class="text-5xl font-bold text-center capitalize">our Products</h1>
+        <div class="grid lg:grid-cols-3 lg:gap-12 gap-6">
+          <div class="rounded hover:shadow-lg border grid">
+            <img
+              src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
+              alt=""
+              class="rounded rounded-b-none w-full h-[300px]"
+            />
+            <div class="py-4 px-4 grid gap-3 items-start">
+              <h1 class="text-2xl font-semibold">Modern Accent Chair</h1>
+              <p class="text-gray-700 text-lg">
+                Add a pop of color and style with the Modern Accent Chair,
+                perfect for making a statement while offering comfort and
+                support.
+              </p>
+              <div class="flex justify-between items-center w-full pr-4 pt-4">
+                <button
+                  class="bg-main px-6 py-2 w-28 text-white text-lg rounded object-cover hover:text-black hover:bg-opacity-70"
+                >
+                  more
+                </button>
+                <button
+                  class="w-12 h-12 rounded-full bg-main text-white text-3xl hover:bg-opacity-70 hover:text-black"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="rounded hover:shadow-lg border grid">
+            <img
+              src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
+              alt=""
+              class="rounded rounded-b-none w-full h-[300px]"
+            />
+            <div class="py-4 px-4 grid gap-3 items-start">
+              <h1 class="text-2xl font-semibold">Modern Accent Chair</h1>
+              <p class="text-gray-700 text-lg">
+                Add a pop of color and style with the Modern Accent Chair,
+                perfect for making a statement while offering comfort and
+                support.
+              </p>
+              <div class="flex justify-between items-center w-full pr-4 pt-4">
+                <button
+                  class="bg-main px-6 py-2 w-28 text-white text-lg rounded object-cover hover:text-black hover:bg-opacity-70"
+                >
+                  more
+                </button>
+                <button
+                  class="w-12 h-12 rounded-full bg-main text-white text-3xl hover:bg-opacity-70 hover:text-black"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="rounded hover:shadow-lg border grid">
+            <img
+              src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
+              alt=""
+              class="rounded rounded-b-none w-full h-[300px]"
+            />
+            <div class="py-4 px-4 grid gap-3 items-start">
+              <h1 class="text-2xl font-semibold">Modern Accent Chair</h1>
+              <p class="text-gray-700 text-lg">
+                Add a pop of color and style with the Modern Accent Chair,
+                perfect for making a statement while offering comfort and
+                support.
+              </p>
+              <div class="flex justify-between items-center w-full pr-4 pt-4">
+                <button
+                  class="bg-main px-6 py-2 w-28 text-white text-lg rounded object-cover hover:text-black hover:bg-opacity-70"
+                >
+                  more
+                </button>
+                <button
+                  class="w-12 h-12 rounded-full bg-main text-white text-3xl hover:bg-opacity-70 hover:text-black"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="rounded hover:shadow-lg border grid">
+            <img
+              src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
+              alt=""
+              class="rounded rounded-b-none w-full h-[300px]"
+            />
+            <div class="py-4 px-4 grid gap-3 items-start">
+              <h1 class="text-2xl font-semibold">Modern Accent Chair</h1>
+              <p class="text-gray-700 text-lg">
+                Add a pop of color and style with the Modern Accent Chair,
+                perfect for making a statement while offering comfort and
+                support.
+              </p>
+              <div class="flex justify-between items-center w-full pr-4 pt-4">
+                <button
+                  class="bg-main px-6 py-2 w-28 text-white text-lg rounded object-cover hover:text-black hover:bg-opacity-70"
+                >
+                  more
+                </button>
+                <button
+                  class="w-12 h-12 rounded-full bg-main text-white text-3xl hover:bg-opacity-70 hover:text-black"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="rounded hover:shadow-lg border grid">
+            <img
+              src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
+              alt=""
+              class="rounded rounded-b-none w-full h-[300px]"
+            />
+            <div class="py-4 px-4 grid gap-3 items-start">
+              <h1 class="text-2xl font-semibold">Modern Accent Chair</h1>
+              <p class="text-gray-700 text-lg">
+                Add a pop of color and style with the Modern Accent Chair,
+                perfect for making a statement while offering comfort and
+                support.
+              </p>
+              <div class="flex justify-between items-center w-full pr-4 pt-4">
+                <button
+                  class="bg-main px-6 py-2 w-28 text-white text-lg rounded object-cover hover:text-black hover:bg-opacity-70"
+                >
+                  more
+                </button>
+                <button
+                  class="w-12 h-12 rounded-full bg-main text-white text-3xl hover:bg-opacity-70 hover:text-black"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="rounded hover:shadow-lg border grid">
+            <img
+              src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
+              alt=""
+              class="rounded rounded-b-none w-full h-[300px]"
+            />
+            <div class="py-4 px-4 grid gap-3 items-start">
+              <h1 class="text-2xl font-semibold">Modern Accent Chair</h1>
+              <p class="text-gray-700 text-lg">
+                Add a pop of color and style with the Modern Accent Chair,
+                perfect for making a statement while offering comfort and
+                support.
+              </p>
+              <div class="flex justify-between items-center w-full pr-4 pt-4">
+                <button
+                  class="bg-main px-6 py-2 w-28 text-white text-lg rounded object-cover hover:text-black hover:bg-opacity-70"
+                >
+                  more
+                </button>
+                <button
+                  class="w-12 h-12 rounded-full bg-main text-white text-3xl hover:bg-opacity-70 hover:text-black"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#2e2e2e] py-20 grid grid-cols-3 mt-12 text-white px-20">
+      <div>logo</div>
+    </footer>
+  </body>
+</html>

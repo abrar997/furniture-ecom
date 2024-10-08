@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        main: "#947255",
-        secondary: "#fff7ed",
+        main: "#6f4e37",
+        secondary: "#f8e1cc",
       },
       fontFamily: {
         main: ["Afacad Flux", "sans-serif"],

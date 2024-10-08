@@ -14,43 +14,43 @@
   </head>
   <body>
     <header
-      class="font-main text-[19px] bg-orange-50 flex justify-between items-center px-20 py-6"
+      class="font-main text-[19px] bg-orange-50 flex justify-between items-center lg:px-20 px-4 lg:py-6 py-4"
     >
-      <a
-        href="/index.html"
-        class="text-3xl text-main font-serif gap-2 flex items-center"
-      >
+      <a href="/index.html" class="text-3xl text-main gap-2 flex font-main">
         <i class="fa-solid fa-igloo"></i>
+        <span class="text-[16px] text-main opacity-60"> with us</span>
       </a>
       <div class="flex text-black font-semibold text-lg gap-10 items-center">
         <a href="index.html" class="hover:opacity-70">Home</a>
-        <a href="login.html" class="hover:opacity-70">Login</a>
-        <a href="logot.html" class="hover:opacity-70">Logout</a>
+        <a href="/user/login.html" class="hover:opacity-70">Login</a>
+        <a href="/user/logout.html" class="hover:opacity-70">Logout</a>
         <a
           href="cart.html"
-          class="text-main w-12 h-12 flex items-center justify-center relative rounded-full shadow bg-slate-50 hover:bg-opacity-70 transition-all duration-300"
+          class="text-main w-12 h-12 flex items-center justify-center relative rounded-full shadow bg-white"
           ><i class="fa-solid fa-cart-shopping"></i>
           <span
-            class="absolute rounded-full -top-4 h-7 w-7 flex items-center justify-center -right-2 bg-main text-white font-bold border shadow"
+            class="absolute rounded-full -top-4 h-7 w-7 flex items-center justify-center -right-2 bg-main text-white shadow"
             >3</span
           >
         </a>
       </div>
     </header>
 
-    <main class="grid lg:gap-20 font-main">
+    <main class="grid lg:gap-20 gap-8 font-main">
       <section
         class="bg-[url('https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover"
         style="background-size: 100%"
       >
         <div
-          class="grid items-center justify-center gap-3 text-center bg-[#020202a7] py-48 text-white"
+          class="grid items-center justify-center gap-3 text-center bg-[#020202a7] lg:py-48 py-12 text-white"
         >
-          <h3 class="font-semibold text-2xl text-gray-200 leading-3">
+          <h3 class="font-semibold lg:text-2xl text-lg text-gray-200 leading-3">
             Welcome to
           </h3>
-          <h1 class="font-bold text-6xl">Furniture Online Market</h1>
-          <p class="text-lg w-[50%] text-center m-auto text-gray-200">
+          <h1 class="font-bold lg:text-6xl text-4xl">
+            Furniture Online Market
+          </h1>
+          <p class="lg:text-lg lg:w-[50%] text-center lg:m-auto text-gray-200">
             We are dedicated to offering a carefully curated selection of
             high-quality furniture that blends functionality with modern design
             . Whether you're furnishing your living room, bedroom, or office,
@@ -60,16 +60,18 @@
           <div
             class="flex items-center justify-center gap-0 opacity-50 text-[#fff7ed]"
           >
-            <img src="./assets/chair.svg" alt="" />
-            <img src="./assets/plant.svg" alt="" />
-            <img src="./assets/books.svg" alt="" />
+            <img src="./assets/chair.svg" alt="" class="w-[10%] lg:w-[5%]" />
+            <img src="./assets/plant.svg" alt="" class="w-[10%] lg:w-[5%]" />
+            <img src="./assets/books.svg" alt="" class="w-[10%] lg:w-[5%]" />
           </div>
         </div>
       </section>
-      <section class="lg:px-20 grid items-center gap-10">
+      <section class="lg:px-20 px-4 grid items-center lg:gap-10 gap-6">
         <h1 class="text-5xl font-bold text-center capitalize">our Products</h1>
         <div class="grid lg:grid-cols-3 lg:gap-12 gap-6">
-          <div class="rounded hover:shadow-lg border grid">
+          <div
+            class="rounded hover:shadow transition-all duration-300 border grid"
+          >
             <img
               src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
               alt=""
@@ -96,7 +98,9 @@
               </div>
             </div>
           </div>
-          <div class="rounded hover:shadow-lg border grid">
+          <div
+            class="rounded hover:shadow transition-all duration-300 border grid"
+          >
             <img
               src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
               alt=""
@@ -123,7 +127,9 @@
               </div>
             </div>
           </div>
-          <div class="rounded hover:shadow-lg border grid">
+          <div
+            class="rounded hover:shadow transition-all duration-300 border grid"
+          >
             <img
               src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
               alt=""
@@ -150,7 +156,9 @@
               </div>
             </div>
           </div>
-          <div class="rounded hover:shadow-lg border grid">
+          <div
+            class="rounded hover:shadow transition-all duration-300 border grid"
+          >
             <img
               src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
               alt=""
@@ -177,7 +185,9 @@
               </div>
             </div>
           </div>
-          <div class="rounded hover:shadow-lg border grid">
+          <div
+            class="rounded hover:shadow transition-all duration-300 border grid"
+          >
             <img
               src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
               alt=""
@@ -204,7 +214,9 @@
               </div>
             </div>
           </div>
-          <div class="rounded hover:shadow-lg border grid">
+          <div
+            class="rounded hover:shadow transition-all duration-300 border grid"
+          >
             <img
               src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
               alt=""
@@ -234,8 +246,57 @@
         </div>
       </section>
     </main>
-    <footer class="bg-[#2e2e2e] py-20 grid grid-cols-3 mt-12 text-white px-20">
-      <div>logo</div>
+    <footer
+      class="bg-[#2e2e2e] lg:py-10 py-6 grid gap-8 lg:gap-0 lg:grid-cols-4 lg:items-center mt-12 text-white lg:px-20 px-4"
+    >
+      <div class="col-span-1">
+        <a href="" class="text-white text-5xl">
+          <i class="fa-solid fa-igloo"></i>
+          <span class="text-[16px] text-secondary opacity-60"> with us</span>
+        </a>
+        <p class="text-gray-300 tracking-wide">
+          we believe in creating spaces that inspire.
+        </p>
+      </div>
+      <div
+        class="lg:col-span-2 w-full grid lg:items-center lg:justify-center lg:text-center order-3 lg:order-2"
+      >
+        <div class="flex gap-4 text-main lg:m-auto">
+          <a
+            href=""
+            class="bg-secondary text-lg hover:bg-opacity-85 rounded-full w-10 h-10 flex items-center justify-center"
+            ><i class="fa-solid fa-location-dot"></i
+          ></a>
+          <a
+            href=""
+            class="bg-secondary text-lg hover:bg-opacity-85 rounded-full w-10 h-10 flex items-center justify-center"
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+          <a
+            href=""
+            class="bg-secondary text-lg hover:bg-opacity-85 rounded-full w-10 h-10 flex items-center justify-center"
+            ><i class="fa-solid fa-phone"></i
+          ></a>
+        </div>
+        <p class="text-gray-300 mt-3">
+          all rights reserved @2024 Abrar Muthana
+        </p>
+      </div>
+      <div class="grid gap-2 items-center lg:col-span-1 order-2">
+        <p class="lg:text-2xl text-xl">Contact us</p>
+        <form action="" class="flex gap-2">
+          <input
+            type="text"
+            class="rounded px-3 py-2 bg-transparent text-gray-500 w-full border"
+            placeholder="send us a message"
+          />
+          <button
+            class="bg-main px-4 py-2 text-secondary rounded hover:bg-opacity-85"
+          >
+            Send
+          </button>
+        </form>
+      </div>
     </footer>
   </body>
 </html>

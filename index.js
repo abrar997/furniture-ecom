@@ -1,6 +1,9 @@
 var loginForm = document.getElementById("login-form");
 
-if (window.location.pathname === "/index.html") {
+if (
+  window.location.pathname === "/index.html" ||
+  window.location.pathname === "/"
+) {
   if (!localStorage.getItem("data")) {
     window.location.href = "/login.html";
   } else {

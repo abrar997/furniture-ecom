@@ -15,18 +15,16 @@
   <body class="bg-slate-50">
     <main>
       <section
-        class="flex flex-col p-4 lg:h-screen font-main lg:w-[45%] m-auto items-center justify-center my-auto"
+        class="p-4 flex flex-col gap-4 lg:h-screen font-main lg:w-[45%] m-auto items-center justify-center my-auto"
       >
+      <h1 class="font-bold text-4xl">All Products </h1>
         <div
           action=""
           class="rounded grid bg-white p-4 px-6 py-10 w-full gap-6"
         >
-          <div class="flex justify-between">
-            <h1 class="font-bold text-3xl">Products :</h1>
-            <p class="text-red-500 font-semibold text-2xl">Total:4</p>
-          </div>
+   
           <div>
-            <div class="grid grid-cols-4 gap-4 items-start w-full pb-4">
+            <div class="grid grid-cols-4 gap-4 items-center w-full pb-4">
               <img
                 src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
                 alt=""
@@ -34,16 +32,19 @@
               />
               
               <div class="col-span-2 pt-4">
-                <h1 class="capitalize text-xl font-semibold text-gray-700">
+                <h1 class="capitalize text-2xl font-semibold text-gray-700">
                   Product name
                 </h1>
                 <span class="text-lg font-semibold text-red-500">$120</span>
               </div>
 
-                <button class="border w-8 h-8 rounded hover:bg-slate-100">
+                <button class="border w-12 h-12 text-2xl rounded hover:bg-slate-100">
                   <i class="fa fa-trash text-red-500" aria-hidden="true"></i>
                 </button>
               </div>
+            </div>
+            <div class="flex justify-between">
+              <p class="text-red-500 font-semibold text-2xl">Total:4</p>
             </div>
           </div>
         </div>

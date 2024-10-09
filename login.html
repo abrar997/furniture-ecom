@@ -12,8 +12,8 @@
 
     <title>login</title>
   </head>
-  <body class="bg-slate-50 login-page">
-    <main>
+  <body class="bg-slate-50">
+    <main class="login-page">
       <section
         class="flex flex-col p-4 lg:h-screen font-main lg:w-[45%] m-auto items-center justify-center my-auto"
       >
@@ -21,13 +21,13 @@
           action=""
           class="rounded grid bg-white p-4 lg:py-20 py-10 w-full shadow gap-6"
         >
-          <div class="text-center m-auto">
+          <div class="text-center m-auto" id="login-title">
             <h1
               class="flex text-4xl capitalize font-bold gap-4 items-end justify-center"
             >
               Welcome Back !
             </h1>
-            <p class="text-center text-gray-600 text-lg">
+            <p class="text-center text-gray-600 text-lg" id="">
               Please enter your credentials to access your account.
             </p>
           </div>
@@ -41,8 +41,8 @@
                 placeholder="example@gmail.com"
                 class="focus:outline-none text-lg border rounded px-2 py-3 w-full"
                 id="email"
+                required
               />
-              <!-- required -->
             </div>
             <div class="grid gap-2">
               <label for="password" class="font-semibold text-lg text-gray-600"
@@ -53,18 +53,20 @@
                 placeholder="********"
                 class="focus:outline-none text-lg border rounded px-2 py-3 w-full"
                 id="password"
+                required
               />
-              <!-- required -->
             </div>
             <button
               class="bg-main hover:bg-opacity-85 lg:text-xl text-lg text-secondary rounded py-3"
+              type="submit"
+              id="login-btn"
             >
               Send
             </button>
             <p class="text-lg text-gray-400 tracking-wide -mt-3">
               if you want to delete your account ,
               <a
-                href="/user/logout.html"
+                href="/logout.html"
                 class="text-blue-700 underline hover:text-opacity-85"
                 >Logout</a
               >
@@ -74,6 +76,6 @@
       </section>
     </main>
 
-    <script src="../js/index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -12,7 +12,7 @@
 
     <title>Shopping</title>
   </head>
-  <body id="home-page" class="home-page hidden">
+  <body>
     <header
       class="font-main text-[19px] bg-slate-50 flex justify-between items-center lg:px-20 px-4 lg:py-6 py-4"
     >
@@ -20,20 +20,27 @@
         <i class="fa-solid fa-igloo"></i>
       </a>
       <div class="flex text-black font-semibold text-xl gap-10 items-center">
-        <a href="/user/login.html" class="hover:opacity-85 rounded">Login</a>
+        <a href="login.html" class="hover:opacity-85 rounded">Login</a>
         <a
+          href="logout.html"
+          class="hover:opacity-85 rounded hidden"
+          id="logout-link"
+          >Logout</a
+        >
+        <button
           href="cart.html"
           class="text-main w-12 h-12 flex items-center justify-center relative rounded-full shadow"
-          ><i class="fa-solid fa-cart-shopping"></i>
+        >
+          <i class="fa-solid fa-cart-shopping"></i>
           <span
             class="absolute rounded-full -top-4 h-7 w-7 flex items-center justify-center -right-2 bg-main text-white shadow"
             >3</span
           >
-        </a>
+        </button>
       </div>
     </header>
 
-    <main class="grid lg:gap-12 gap-8 font-main">
+    <main class="grid lg:gap-12 gap-8 font-main home-page">
       <section
         class="bg-[url('https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover"
         style="background-size: 100%"
@@ -47,7 +54,9 @@
           <h1 class="font-bold lg:text-6xl text-4xl">
             Furniture Online Market
           </h1>
-          <p class="lg:text-lg lg:w-[50%] text-center lg:m-auto text-gray-200">
+          <p
+            class="lg:text-lg lg:w-[50%] text-center lg:m-auto text-gray-200 px-12"
+          >
             We are dedicated to offering a carefully curated selection of
             high-quality furniture that blends functionality with modern design
             . Whether you're furnishing your living room, bedroom, or office,
@@ -296,7 +305,6 @@
         </form>
       </div>
     </footer>
-
-    <script src="./js/index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

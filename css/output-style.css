@@ -882,6 +882,11 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1059,6 +1064,14 @@ video {
   box-sizing: border-box;
 }
 
+.home-page.hidden {
+  display: none;
+}
+
+.login-page.hidden {
+  display: none;
+}
+
 .hover\:bg-slate-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
@@ -1120,6 +1133,10 @@ video {
     height: 100vh;
   }
 
+  .lg\:w-\[40\%\] {
+    width: 40%;
+  }
+
   .lg\:w-\[45\%\] {
     width: 45%;
   }
@@ -1130,6 +1147,10 @@ video {
 
   .lg\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .lg\:w-\[60\%\] {
+    width: 60%;
   }
 
   .lg\:grid-cols-3 {
@@ -1210,11 +1231,6 @@ video {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .lg\:text-6xl {

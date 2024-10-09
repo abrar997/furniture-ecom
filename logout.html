@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="../css/input-style.css" />
     <link rel="stylesheet" href="../css/output-style.css" />
 
-    <title>logout</title>
+    <title>Logout</title>
   </head>
   <body class="bg-slate-50">
     <main>
       <section
-        class="flex flex-col lg:h-screen p-12 font-main lg:w-[45%] m-auto items-center justify-center my-auto"
+        class="flex flex-col lg:h-screen p-12 font-main lg:w-[60%] items-center justify-center m-auto"
       >
         <div
           action=""
-          class="rounded grid bg-white py-10 w-full shadow lg:gap-6 gap-4"
+          class="rounded grid bg-white py-10 w-full shadow lg:gap-6 gap-4 p-12"
         >
           <div class="text-center">
             <h1
@@ -28,22 +28,20 @@
               Thank you for visiting.
             </h1>
             <h2
-              class="flex lg:text-4xl text-2xl text-gray-700 capitalize font-semibold gap-4 items-end justify-center"
+              class="flex lg:text-3xl text-2xl text-gray-700 capitalize font-semibold gap-4 items-end justify-center"
             >
               We hope to see you again soon!
             </h2>
           </div>
-          <a
-            href="/user/login.html"
-            class="m-auto font-semibold text-lg bg-main hover:bg-opacity-85 text-white px-10 rounded py-2"
-            id="logout"
+          <button
+            class="m-auto btn font-semibold text-lg bg-main hover:bg-opacity-85 text-white px-10 rounded py-2"
+            id="logout-btn"
           >
-            log out
-          </a>
+            Log out
+          </button>
         </div>
       </section>
     </main>
-
-    <script src="../js/index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

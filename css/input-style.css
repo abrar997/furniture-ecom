@@ -8,3 +8,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.home-page.hidden {
+  display: none;
+}
+
+.login-page.hidden {
+  display: none;
+}

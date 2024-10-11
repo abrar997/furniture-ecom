@@ -7,12 +7,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/input-style.css" />
     <link rel="stylesheet" href="../css/output-style.css" />
 
     <title>login</title>
   </head>
-  <body class="bg-slate-50">
+  <body class="bg-slate-100">
     <main class="login-page">
       <section
         class="flex flex-col p-4 lg:h-screen font-main lg:w-[45%] m-auto items-center justify-center my-auto"
@@ -75,7 +79,33 @@
         </div>
       </section>
     </main>
+    <script>
+      var loginForm = document.getElementById("login-form");
+      if (localStorage.getItem("data")) {
+        //if login change elements of login page
+        document.getElementById("login-title").innerHTML =
+          "<h1 class='text-4xl font-bold text-main'>You are already login </h1>";
+        //if login hide form
+        loginForm.style.display = "none";
+        setTimeout(() => {
+          window.location.href = "/index.html"; // if login return to home page after 1.5s
+        }, 1500);
+      } else {
+        // if not login add user and got to home page
+        loginForm.addEventListener("submit", function (e) {
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
 
-    <script src="./index.js"></script>
+          e.preventDefault();
+          const user = {
+            email,
+            password,
+          };
+          localStorage.setItem("data", JSON.stringify(user));
+          loginForm.reset(); //reset form inputs
+          window.location.href = "/index.html";
+        });
+      }
+    </script>
   </body>
 </html>

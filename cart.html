@@ -7,48 +7,91 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="../css/input-style.css" />
-    <link rel="stylesheet" href="../css/output-style.css" />
-
-    <title>shopping cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="task1/css/input-style.css" />
+    <link rel="stylesheet" href="task1/css/output-style.css" />
+    <title>cart</title>
   </head>
-  <body class="bg-slate-50">
+  <body class="bg-slate-100">
     <main>
       <section
-        class="p-4 flex flex-col gap-4 lg:h-screen font-main lg:w-[45%] m-auto items-center justify-center my-auto"
+        class="p-4 flex flex-col gap-4 font-main xl:w-[45%] lg:w-[60%] m-auto justify-center mt-16"
       >
-      <h1 class="font-bold text-4xl">All Products </h1>
-        <div
-          action=""
-          class="rounded grid bg-white p-4 px-6 py-10 w-full gap-6"
-        >
-   
-          <div>
-            <div class="grid grid-cols-4 gap-4 items-center w-full pb-4">
-              <img
-                src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYWlyfGVufDB8fDB8fHww"
-                alt=""
-                class="w-32 h-32 rounded col-span-1"
-              />
-              
-              <div class="col-span-2 pt-4">
-                <h1 class="capitalize text-2xl font-semibold text-gray-700">
-                  Product name
-                </h1>
-                <span class="text-lg font-semibold text-red-500">$120</span>
-              </div>
-
-                <button class="border w-12 h-12 text-2xl rounded hover:bg-slate-100">
-                  <i class="fa fa-trash text-red-500" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
-            <div class="flex justify-between">
-              <p class="text-red-500 font-semibold text-2xl">Total:4</p>
-            </div>
-          </div>
+        <h1 class="font-bold text-4xl cart-title text-center">All Products</h1>
+        <div class="rounded grid w-full gap-6" id="cart-products"></div>
+        <div class="mr-auto">
+          <span class="font-bold total-price text-red-500 text-2xl"
+            >Total Price: <span id="products-length" class="text-main"> </span
+          ></span>
         </div>
       </section>
     </main>
+
+    <script>
+      let cart = localStorage.getItem("cart")
+        ? JSON.parse(localStorage.getItem("cart"))
+        : [];
+
+      function CartProducts() {
+        var cartContainer = document.getElementById("cart-products");
+        if (cart.length === 0) {
+          cartContainer.innerHTML =
+            '<div class="flex flex-col gap-0 h-screen items-center justify-center"> <img class="opacity-70 h-[450px]" src="./assets/add.svg" />  <h1 class="text-5xl font-bold text-center "> <a href="/" class="text-red-500"> Start </a></a> Add Products</h1> </div>';
+          document.querySelector(".cart-title").style.display = "none";
+          document.querySelector(".total-price").innerHTML = "";
+        } else {
+          cartContainer.innerHTML = cart
+            .map((item, index) => {
+              return ` <div
+            class="flex gap-4 bg-white pr-4 border justify-between items-center w-full"
+            key=${item.id}>
+            <div class="flex items-center gap-4">
+              <img
+                src=${item.img} alt=""
+                class="w-32 h-32 rounded col-span-1"
+              />
+              <div>
+                <h1 class="capitalize text-2xl font-semibold text-gray-700">
+                  <span class="text-gray-400">Name :</span> ${item.title}
+                </h1>
+                <p class="text-lg font-semibold text-red-500">
+                  <span class="text-gray-400">Price :</span> ${item.price}
+                </p>
+              </div>
+            </div>
+
+            <button
+              class="px-6 py-2 bg-red-500 text-xl rounded text-white hover:bg-opacity-85"
+              onclick='deleteItem(${index})'
+              >
+              Remove
+            </button>
+          </div>`;
+            })
+            .join("");
+        }
+        let total = document.getElementById("products-length");
+        const totalPrice =
+          cart.length > 0
+            ? cart.reduce((prevVal, currentVal) => {
+                return prevVal + currentVal.price;
+              }, 0)
+            : 0;
+        total.innerHTML = `$${totalPrice}`;
+      }
+
+      const deleteItem = (index) => {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        CartProducts();
+      };
+
+      CartProducts();
+    </script>
+
+    <script src="./index.js" defer></script>
   </body>
 </html>

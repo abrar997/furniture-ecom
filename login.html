@@ -79,14 +79,18 @@
     </main>
     <script>
       var loginForm = document.getElementById("login-form");
-      if (localStorage.getItem("data")) {
+      let user = JSON.parse(localStorage.getItem("user"))
+        ? JSON.parse(localStorage.getItem("user"))
+        : [];
+
+      if (localStorage.getItem("user")) {
         //if login change elements of login page
         document.getElementById("login-title").innerHTML =
           "<h1 class='text-4xl font-semibold lg:font-bold text-main'>You are already login </h1>";
         //if login hide form
         loginForm.style.display = "none";
         setTimeout(() => {
-          window.location.href = "/index.html"; // if login return to home page after 1.5s
+          window.location.href = "index.html"; // if login return to home page after 1.5s
         }, 1500);
       } else {
         // if not login add user and got to home page
@@ -99,9 +103,9 @@
             email,
             password,
           };
-          localStorage.setItem("data", JSON.stringify(user));
+          localStorage.setItem("user", JSON.stringify(user));
           loginForm.reset(); //reset form inputs
-          window.location.href = "/index.html";
+          window.location.href = "index.html";
         });
       }
     </script>

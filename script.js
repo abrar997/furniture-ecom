@@ -103,6 +103,9 @@ function showAllProducts() {
           </div>`;
     })
     .join("");
+  //number of items in cart
+  document.getElementById("number-products").innerHTML =
+    cart.length > 0 ? cart.length : "0";
 }
 //when click on add btn should add to cart
 function addCart(id) {
@@ -117,9 +120,7 @@ function addCart(id) {
   }
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  //number of items in cart
-  document.getElementById("number-products").innerHTML =
-    cart.length > 0 && cart.length;
+  showAllProducts();
 }
 
 showAllProducts();

@@ -86,7 +86,7 @@ function showAllProducts() {
             <div class="p-4 flex flex-col gap-1 items-start">
             <h1 class="text-2xl font-semibold">${item.title}</h1>
             
-            <h2 class="font-semibold text-red-500">${item.price}</h2>
+            <h2 class="font-semibold text-red-500">$${item.price}</h2>
             <p class="text-gray-700 text-lg">
             ${item.description}
               </p>

@@ -22,7 +22,9 @@
       <div
         class="flex text-black font-semibold lg:text-2xl text-xl lg:gap-10 gap-4 items-center"
       >
-        <a href="login.html" class="hover:opacity-85 rounded">Login</a>
+        <a href="login.html" class="hover:opacity-85 rounded" id="login-link"
+          >Login</a
+        >
         <a href="logout.html" class="hover:opacity-85 rounded" id="logout-link"
           >Logout</a
         >
@@ -46,7 +48,7 @@
         style="background-size: 100% cover"
       >
         <div
-          class="grid items-center justify-center gap-3 text-center bg-[#020202a7] lg:py-48 py-12 text-white"
+          class="grid items-center justify-center gap-3 lg:gap-0 text-center bg-[#020202a7] lg:py-48 py-12 text-white h-full"
         >
           <h3 class="font-semibold lg:text-2xl text-lg text-gray-200 leading-3">
             Welcome to
@@ -55,7 +57,7 @@
             Furniture Online Market
           </h1>
           <p
-            class="lg:text-lg lg:w-[50%] text-center lg:m-auto text-gray-200 px-12"
+            class="lg:text-lg lg:w-[50%] text-center lg:m-auto text-gray-200 px-8 lg:px-0"
           >
             We are dedicated to offering a carefully curated selection of
             high-quality furniture that blends functionality with modern design
@@ -66,9 +68,9 @@
           <div
             class="flex items-center justify-center gap-0 opacity-50 text-[#fff7ed]"
           >
-            <img src="./assets/chair.svg" alt="" class="w-[10%] lg:w-[5%]" />
-            <img src="./assets/plant.svg" alt="" class="w-[10%] lg:w-[5%]" />
-            <img src="./assets/books.svg" alt="" class="w-[10%] lg:w-[5%]" />
+            <img src="./assets/chair.svg" alt="" class="w-[12%] lg:w-[5%]" />
+            <img src="./assets/plant.svg" alt="" class="w-[12%] lg:w-[5%]" />
+            <img src="./assets/books.svg" alt="" class="w-[12%] lg:w-[5%]" />
           </div>
         </div>
       </section>
@@ -97,7 +99,7 @@
       <div
         class="lg:col-span-2 w-full grid gap-2 lg:items-center lg:justify-center lg:text-center order-3 lg:order-2"
       >
-        <div class="flex gap-4 text-main lg:m-auto">
+        <div class="flex lg:gap-4 gap-2 text-main lg:m-auto">
           <a
             href=""
             class="bg-secondary text-lg hover:bg-opacity-85 rounded-full w-10 h-10 flex items-center justify-center"
@@ -114,8 +116,8 @@
             ><i class="fa-solid fa-phone"></i
           ></a>
         </div>
-        <p class="text-gray-300 mt-3">
-          all rights reserved @2024 Abrar Muthana
+        <p class="text-gray-300 lg:mt-3">
+          All rights reserved @2024 Abrar Muthana
         </p>
       </div>
       <div class="grid gap-2 items-center lg:col-span-1 order-2">
@@ -140,6 +142,7 @@
         document.getElementById("logout-link").classList.add("hidden");
       } else {
         document.getElementById("logout-link").classList.remove("hidden");
+        document.getElementById("login-link").classList.add("hidden");
       }
     </script>
     <script src="./index.js" defer></script>

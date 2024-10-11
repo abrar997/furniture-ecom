@@ -2,6 +2,7 @@
 let cart = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : [];
+
 const products = [
   {
     id: 1,

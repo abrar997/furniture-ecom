@@ -21,8 +21,7 @@
         class="flex flex-col p-4 h-screen font-main lg:w-[45%] m-auto items-center justify-center my-auto"
       >
         <div
-          action=""
-          class="rounded grid bg-white p-4 lg:py-20 py-10 w-full shadow gap-6"
+          class="rounded grid bg-white p-4 lg:py-20 py-10 w-full shadow lg:gap-6"
         >
           <div class="text-center m-auto" id="login-title">
             <h1
@@ -87,7 +86,7 @@
         //if login hide form
         loginForm.style.display = "none";
         setTimeout(() => {
-          window.location.href = "/"; // if login return to home page after 1.5s
+          window.location.href = "/index.html"; // if login return to home page after 1.5s
         }, 1500);
       } else {
         // if not login add user and got to home page
@@ -102,7 +101,7 @@
           };
           localStorage.setItem("data", JSON.stringify(user));
           loginForm.reset(); //reset form inputs
-          window.location.href = "/";
+          window.location.href = "/index.html";
         });
       }
     </script>

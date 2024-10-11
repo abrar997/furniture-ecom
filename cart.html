@@ -39,7 +39,7 @@
         var cartContainer = document.getElementById("cart-products");
         if (cart.length === 0) {
           cartContainer.innerHTML =
-            '<div class="flex flex-col gap-0 h-screen items-center justify-center"> <img class="opacity-70 h-[450px]" src="./assets/add.svg" />  <h1 class="text-5xl font-bold text-center "> <a href="/" class="text-red-500"> Start </a></a> Add Products</h1> </div>';
+            '<div class="flex flex-col gap-0 lg:h-screen items-center justify-center"> <img class="opacity-70 h-[450px]" src="./assets/add.svg" />  <h1 class="lg:text-5xl text-3xl font-bold text-center"> <a href="/" class="text-red-500"> Start </a></a> Add Products</h1> </div>';
           document.querySelector(".cart-title").style.display = "none";
           document.querySelector(".total-price").innerHTML = "";
         } else {

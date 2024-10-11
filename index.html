@@ -14,7 +14,7 @@
   </head>
   <body>
     <header
-      class="font-main text-[19px] bg-slate-50 flex justify-between items-center lg:px-20 px-4 lg:py-6 py-4"
+      class="font-main text-[19px] bg-slate-50 flex justify-between items-center lg:px-20 px-4 lg:py-6 py-6"
     >
       <a href="/index.html" class="text-4xl text-main gap-2 flex font-main">
         <i class="fa-solid fa-igloo"></i>
@@ -31,12 +31,12 @@
         >
         <a
           href="cart.html"
-          class="text-main w-12 h-12 flex items-center justify-center relative rounded-full shadow"
+          class="text-main flex items-center justify-center relative rounded-full shadow"
         >
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-cart-shopping relative"></i>
           <span
             id="number-products"
-            class="absolute rounded-full -top-4 h-7 w-7 flex items-center justify-center -right-2 bg-main text-white shadow"
+            class="absolute rounded-full lg:-top-4 -top-5 lg:h-7 lg:w-7 w-5 h-5 px-2 flex items-center justify-center -right-2 bg-main text-white shadow"
             >0</span
           >
         </a>
@@ -45,11 +45,11 @@
 
     <main class="grid lg:gap-12 gap-8 font-main home-page">
       <section
-        class="bg-[url('https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover"
-        style="background-size: 100%"
+        class="lg:h-full h-[390px] bg-[url('https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover"
+        style="background-size: 100% cover"
       >
         <div
-          class="grid items-center justify-center gap-3 text-center bg-[#020202a7] lg:py-48 py-12 h-full text-white"
+          class="grid items-center justify-center gap-3 text-center bg-[#020202a7] lg:py-48 py-12 text-white"
         >
           <h3 class="font-semibold lg:text-2xl text-lg text-gray-200 leading-3">
             Welcome to
@@ -78,10 +78,9 @@
 
       <section class="lg:px-20 px-4 grid items-center lg:gap-10 gap-6">
         <div class="grid items-center justify-center">
-          <h1 class="text-5xl font-bold text-center capitalize">
+          <h1 class="lg:text-5xl text-3xl font-bold text-center capitalize">
             our main Products
           </h1>
-          <div class="bg-secondary w-10 h-1.5 rounded rounded-r-none"></div>
         </div>
         <div class="grid lg:grid-cols-4 lg:gap-12 gap-6" id="products">
           <!-- <div

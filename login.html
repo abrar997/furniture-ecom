@@ -18,7 +18,7 @@
   <body class="bg-slate-100">
     <main class="login-page">
       <section
-        class="flex flex-col p-4 lg:h-screen font-main lg:w-[45%] m-auto items-center justify-center my-auto"
+        class="flex flex-col p-4 h-screen font-main lg:w-[45%] m-auto items-center justify-center my-auto"
       >
         <div
           action=""
@@ -83,7 +83,7 @@
       if (localStorage.getItem("data")) {
         //if login change elements of login page
         document.getElementById("login-title").innerHTML =
-          "<h1 class='text-4xl font-bold text-main'>You are already login </h1>";
+          "<h1 class='text-4xl font-semibold lg:font-bold text-main'>You are already login </h1>";
         //if login hide form
         loginForm.style.display = "none";
         setTimeout(() => {

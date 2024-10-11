@@ -637,6 +637,10 @@ video {
   margin-top: -0.75rem;
 }
 
+.mr-auto {
+  margin-right: auto;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -647,18 +651,6 @@ video {
 
 .mt-3 {
   margin-top: 0.75rem;
-}
-
-.-mt-2 {
-  margin-top: -0.5rem;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
 }
 
 .flex {
@@ -697,20 +689,16 @@ video {
   height: 300px;
 }
 
+.h-\[450px\] {
+  height: 450px;
+}
+
 .h-full {
   height: 100%;
 }
 
-.h-\[400px\] {
-  height: 400px;
-}
-
 .h-screen {
   height: 100vh;
-}
-
-.h-\[450px\] {
-  height: 450px;
 }
 
 .w-10 {
@@ -839,6 +827,11 @@ video {
   background-color: rgb(248 225 204 / var(--tw-bg-opacity));
 }
 
+.bg-slate-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
 .bg-slate-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
@@ -851,11 +844,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'https\:\/\/images\.unsplash\.com\/photo-1517705008128-361805f42e86\?q\=80\&w\=1987\&auto\=format\&fit\=crop\&ixlib\=rb-4\.0\.3\&ixid\=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA\%3D\%3D\'\)\] {
@@ -957,11 +945,6 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-4xl {

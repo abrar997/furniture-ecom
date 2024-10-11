@@ -706,6 +706,10 @@ video {
   height: 480px;
 }
 
+.max-h-\[300px\] {
+  max-height: 300px;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -852,6 +856,11 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .p-4 {
@@ -1116,6 +1125,29 @@ video {
   background-color: #000000b5;
 }
 
+@media (min-width: 768px) {
+  .md\:w-\[10\%\] {
+    width: 10%;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:gap-7 {
+    gap: 1.75rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:-right-6 {
     right: -1.5rem;
@@ -1189,6 +1221,10 @@ video {
     height: 480px;
   }
 
+  .lg\:h-36 {
+    height: 9rem;
+  }
+
   .lg\:w-32 {
     width: 8rem;
   }
@@ -1213,8 +1249,20 @@ video {
     width: 60%;
   }
 
+  .lg\:w-36 {
+    width: 9rem;
+  }
+
+  .lg\:max-w-36 {
+    max-width: 9rem;
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:items-start {
@@ -1259,6 +1307,10 @@ video {
 
   .lg\:p-12 {
     padding: 3rem;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:px-0 {
@@ -1344,5 +1396,9 @@ video {
 @media (min-width: 1280px) {
   .xl\:w-\[45\%\] {
     width: 45%;
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

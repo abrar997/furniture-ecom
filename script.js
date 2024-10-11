@@ -30,7 +30,7 @@ const products = [
   },
   {
     id: 4,
-    img: "https://images.unsplash.com/photo-1491336440196-6d4fee45a05e?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1655988940601-7702d8685f95?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Modern Accent Chair",
     price: 120,
     description:
@@ -38,7 +38,7 @@ const products = [
   },
   {
     id: 5,
-    img: "https://images.unsplash.com/photo-1491336440196-6d4fee45a05e?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1623195373626-d71c95293bef?q=80&w=2011&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Modern Accent Chair",
     price: 120,
     description:
@@ -46,7 +46,7 @@ const products = [
   },
   {
     id: 6,
-    img: "https://images.unsplash.com/photo-1491336440196-6d4fee45a05e?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://plus.unsplash.com/premium_photo-1686090446928-9fcc1b4a2d33?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Modern Accent Chair",
     price: 120,
     description:

@@ -60,19 +60,19 @@
             .map((item, index) => {
               return `
           <div
-            class="flex gap-4 relative group  bg-white p-4 lg:po-0 lg:pr-4 border justify-between lg:items-center items-start w-full"
+            class="flex gap-4 relative group  bg-white p-4  lg:pr-4 border justify-between lg:items-center items-start w-full"
             key=${item.id}>
             <div class="lg:flex lg:items-center w-full grid gap-2 lg:gap-4">
               <img
                 src=${item.img} alt=""
-                class="lg:w-32 lg:h-32 rounded lg:col-span-1"
+                class="lg:w-36 lg:h-36 h-content w-full max-h-[300px] rounded lg:col-span-1"
               />
               <div>
                 <h1 class="capitalize lg:text-2xl text-xl font-semibold text-gray-700">
                   <span class="text-gray-400">Name :</span> ${item.title}
                 </h1>
                 <p class="text-lg font-semibold text-red-500">
-                  <span class="text-gray-400">Price :</span>$ ${item.price}
+                  <span class="text-gray-400">Price :</span> $${item.price}
                 </p>
               </div>
             </div>

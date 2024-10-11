@@ -50,7 +50,8 @@
       document
         .getElementById("logout-btn")
         .addEventListener("click", function () {
-          localStorage.removeItem("user");
+          localStorage.removeItem("user"); //remove user when logout
+          localStorage.removeItem("cart"); //remove items when logout
           window.location.href = "login.html";
         });
     </script>

@@ -137,14 +137,15 @@
       </div>
     </footer>
     <script>
+      //check if use not login return login page instead of index
       if (!localStorage.getItem("user")) {
         window.location.href = "./login.html";
-        document.getElementById("logout-link").classList.add("hidden");
+        document.getElementById("logout-link").classList.add("hidden"); //to hide logout link
       } else {
-        document.getElementById("logout-link").classList.remove("hidden");
-        document.getElementById("login-link").classList.add("hidden");
+        document.getElementById("logout-link").classList.remove("hidden"); //to show logout
+        document.getElementById("login-link").classList.add("hidden"); //to hide login link
       }
     </script>
-    <script src="./index.js" defer></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>

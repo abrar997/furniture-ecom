@@ -70,6 +70,7 @@ const products = [
   },
 ];
 
+//to show All products in index page
 function showAllProducts() {
   var container = document.getElementById("products");
   container.innerHTML = products
@@ -102,11 +103,10 @@ function showAllProducts() {
           </div>`;
     })
     .join("");
-  document.getElementById("number-products").innerHTML =
-    cart.length > 0 ? cart.length : "0";
 }
-
+//when click on add btn should add to cart
 function addCart(id) {
+  // to check if item added to cart before add new one
   let product = products.find((item) => item.id === id);
   if (!cart.some((item) => item.id === product.id)) {
     product.quantity = 1;
@@ -116,6 +116,8 @@ function addCart(id) {
     cartProduct.quantity++;
   }
   localStorage.setItem("cart", JSON.stringify(cart));
+
+  //number of items in cart
   document.getElementById("number-products").innerHTML =
     cart.length > 0 && cart.length;
 }

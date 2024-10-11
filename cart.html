@@ -41,7 +41,7 @@
         var cartContainer = document.getElementById("cart-products");
         if (cart.length === 0) {
           cartContainer.innerHTML =
-            '<div class="lg:-mt-24 -mt-12 flex flex-col gap-0 lg:h-screen items-center justify-center"> <img class="opacity-70 h-[489px]" src="./assets/add.svg" />  <h1 class="lg:text-5xl text-3xl font-bold text-center"> <a href="/" class="text-red-500"> Start </a></a> Add Products</h1> </div>';
+            '<div class="lg:-mt-24 -mt-12 flex flex-col gap-0 lg:h-screen items-center justify-center"> <img class="opacity-70 h-[489px]" src="./assets/add.svg" />  <h1 class="lg:text-5xl text-3xl font-bold text-center"> <a href="index.html" class="text-red-500"> Start </a></a> Add Products</h1> </div>';
 
           document.querySelector(".cart-title").style.display = "none";
           document.querySelector(".total-price").innerHTML = "";
@@ -49,19 +49,19 @@
           cartContainer.innerHTML = cart
             .map((item, index) => {
               return ` <div
-            class="flex gap-4 relative group gap-4 bg-white p-4 lg:po-0 lg:pr-4 border justify-between lg:items-center items-start w-full"
+            class="flex gap-4 relative group  bg-white p-4 lg:po-0 lg:pr-4 border justify-between lg:items-center items-start w-full"
             key=${item.id}>
-            <div class="lg:flex lg:items-center w-full grid gap-4">
+            <div class="lg:flex lg:items-center w-full grid gap-2 lg:gap-4">
               <img
                 src=${item.img} alt=""
                 class="lg:w-32 lg:h-32 rounded lg:col-span-1"
               />
               <div>
-                <h1 class="capitalize text-2xl font-semibold text-gray-700">
+                <h1 class="capitalize lg:text-2xl text-xl font-semibold text-gray-700">
                   <span class="text-gray-400">Name :</span> ${item.title}
                 </h1>
                 <p class="text-lg font-semibold text-red-500">
-                  <span class="text-gray-400">Price :</span> ${item.price}
+                  <span class="text-gray-400">Price :</span>$ ${item.price}
                 </p>
               </div>
             </div>

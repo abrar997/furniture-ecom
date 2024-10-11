@@ -1266,6 +1266,10 @@ video {
     gap: 1.5rem;
   }
 
+  .lg\:gap-4 {
+    gap: 1rem;
+  }
+
   .lg\:bg-transparent {
     background-color: transparent;
   }

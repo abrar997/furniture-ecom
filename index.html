@@ -135,17 +135,11 @@
       </div>
     </footer>
     <script>
-      if (
-        window.location.pathname === "" ||
-        window.location.pathname === "/" ||
-        window.location.pathname.endsWith("/index.html")
-      ) {
-        if (!localStorage.getItem("user")) {
-          window.location.href = "/login.html";
-          document.getElementById("logout-link").classList.add("hidden");
-        } else {
-          document.getElementById("logout-link").classList.remove("hidden");
-        }
+      if (!localStorage.getItem("user")) {
+        window.location.href = "/login.html";
+        document.getElementById("logout-link").classList.add("hidden");
+      } else {
+        document.getElementById("logout-link").classList.remove("hidden");
       }
     </script>
     <script src="./index.js" defer></script>

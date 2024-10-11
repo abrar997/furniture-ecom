@@ -18,9 +18,11 @@
   <body class="bg-slate-100">
     <main>
       <section
-        class="p-4 flex flex-col gap-4 font-main xl:w-[45%] lg:w-[60%] m-auto justify-center mt-16"
+        class="p-4 flex flex-col font-main xl:w-[45%] lg:w-[60%] gap-4 m-auto justify-center mt-16"
       >
-        <h1 class="font-bold text-4xl cart-title text-center">All Products</h1>
+        <h1 class="font-bold text-4xl cart-title text-center m-auto">
+          All Products
+        </h1>
         <div class="rounded grid w-full gap-6" id="cart-products"></div>
         <div class="mr-auto">
           <span class="font-bold total-price text-red-500 text-2xl"
@@ -39,7 +41,7 @@
         var cartContainer = document.getElementById("cart-products");
         if (cart.length === 0) {
           cartContainer.innerHTML =
-            '<div class="lg:-mt-24 -mt-12 flex flex-col gap-0 lg:h-screen items-center justify-center"> <img class="opacity-70 h-[489px]" src="./assets/add.svg" />  <h1 class="lg:text-5xl text-3xl font-bold text-center lg:-mt-8 -mt-12"> <a href="/" class="text-red-500"> Start </a></a> Add Products</h1> </div>';
+            '<div class="lg:-mt-24 -mt-12 flex flex-col gap-0 lg:h-screen items-center justify-center"> <img class="opacity-70 h-[489px]" src="./assets/add.svg" />  <h1 class="lg:text-5xl text-3xl font-bold text-center"> <a href="/" class="text-red-500"> Start </a></a> Add Products</h1> </div>';
 
           document.querySelector(".cart-title").style.display = "none";
           document.querySelector(".total-price").innerHTML = "";
@@ -47,12 +49,12 @@
           cartContainer.innerHTML = cart
             .map((item, index) => {
               return ` <div
-            class="flex gap-4 bg-white pr-4 border justify-between items-center w-full"
+            class="flex gap-4 relative group gap-4 bg-white p-4 lg:po-0 lg:pr-4 border justify-between lg:items-center items-start w-full"
             key=${item.id}>
-            <div class="flex items-center gap-4">
+            <div class="lg:flex lg:items-center w-full grid gap-4">
               <img
                 src=${item.img} alt=""
-                class="w-32 h-32 rounded col-span-1"
+                class="lg:w-32 lg:h-32 rounded lg:col-span-1"
               />
               <div>
                 <h1 class="capitalize text-2xl font-semibold text-gray-700">
@@ -63,13 +65,14 @@
                 </p>
               </div>
             </div>
-
-            <button
-              class="px-6 py-2 bg-red-500 text-xl rounded text-white hover:bg-opacity-85"
-              onclick='deleteItem(${index})'
-              >
-              Remove
-            </button>
+      <div class='lg:bg-transparent group-hover:flex hidden transition-all duration-300 lg:flex items-center justify-center lg:justify-end lg:items-center absolute inset-0 bg-[#000000b5] w-full mr-2'>
+      <button
+      class="px-6 py-2 flex bg-red-500 text-xl rounded text-white hover:bg-opacity-85 lg:mr-4"
+      onclick='deleteItem(${index})'
+      >
+      Remove
+    </button>
+    </div>
           </div>`;
             })
             .join("");

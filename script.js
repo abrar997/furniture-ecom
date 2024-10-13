@@ -112,11 +112,12 @@ function addCart(id) {
   // to check if item added to cart before add new one
   let product = products.find((item) => item.id === id);
   if (!cart.some((item) => item.id === product.id)) {
+    //if u want add new product
     product.quantity = 1;
     cart.push(product);
   } else {
-    const cartProduct = cart.find((item) => item.id === product.id);
-    cartProduct.quantity++;
+    // if are already added product
+    alert("you have already added this product");
   }
   localStorage.setItem("cart", JSON.stringify(cart));
 

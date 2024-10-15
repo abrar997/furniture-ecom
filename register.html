@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/input-style.css" />
+    <link rel="stylesheet" href="./css/output-style.css" />
+    <title>register</title>
+  </head>
+  <body class="bg-slate-100 font-main">
+    <main class="register-page">
+      <section
+        class="flex flex-col p-4 mt-12 lg:mt-0 lg:h-screen lg:w-[45%] m-auto items-center justify-center"
+      >
+        <div
+          class="rounded grid bg-white p-4 lg:py-20 py-10 w-full shadow lg:gap-2"
+        >
+          <div class="text-center m-auto grid gap-2">
+            <h1
+              class="flex text-4xl items-center gap-3 capitalize font-bold justify-center"
+            >
+              Register
+            </h1>
+            <p class="text-xl capitalize text-center text-gray-600 mb-8">
+              Start create your account
+            </p>
+          </div>
+          <form action="" class="grid gap-6 lg:px-4" id="register-form">
+            <div class="grid gap-2">
+              <label for="name" class="font-semibold text-xl text-gray-600"
+                >Name</label
+              >
+              <input
+                type="text"
+                placeholder="John Smith"
+                class="focus:outline-none border rounded px-2 py-3 w-full lg:text-xl text-lg"
+                id="name"
+                required
+              />
+            </div>
+            <div class="grid gap-2">
+              <label for="email" class="font-semibold text-xl text-gray-600"
+                >Email</label
+              >
+              <input
+                type="email"
+                placeholder="example@gmail.com"
+                class="focus:outline-none border rounded px-2 py-3 w-full lg:text-xl text-lg"
+                id="email"
+                required
+              />
+            </div>
+            <div class="grid gap-2">
+              <label
+                for="password"
+                class="font-semibold text-lg lg:text-xl text-gray-600"
+                >Password</label
+              >
+              <input
+                type="password"
+                placeholder="********"
+                class="focus:outline-none text-lg lg:text-xl border rounded px-2 py-3 w-full"
+                id="password"
+                required
+              />
+            </div>
+            <button
+              class="bg-main hover:bg-opacity-85 lg:text-xl text-lg text-secondary rounded py-3"
+              type="submit"
+              id="login-btn"
+            >
+              Register
+            </button>
+            <p class="text-red-500 font-semibold text-xl" id="validation"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script>
+      var form = document.getElementById("register-form");
+      let validation = document.getElementById("validation");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        let users = localStorage.getItem("user")
+          ? JSON.parse(localStorage.getItem("user"))
+          : [];
+
+        const userData = {
+          name: name,
+          email: email,
+          password: password,
+        };
+        //if users not array
+        if (!Array.isArray(users)) {
+          users = [];
+        }
+        //validation to check if named and email used before or not
+        if (users.some((user) => user.name === userData.name)) {
+          validation.innerHTML = `This Name used with other account please try different one`;
+        } else if (users.find((user) => user.email === userData.email)) {
+          validation.innerHTML = `This Email already used ! please try different one`;
+        } else {
+          //if not used add new user to local storage and render login page
+          users.push(userData);
+          localStorage.setItem("user", JSON.stringify(users));
+          window.location.href = "./login.html";
+        }
+      });
+    </script>
+  </body>
+</html>

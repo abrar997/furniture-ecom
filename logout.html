@@ -26,9 +26,10 @@
         >
           <div class="text-center">
             <h1
-              class="flex lg:text-3xl text-xl capitalize text-main font-bold gap-4 items-end justify-center"
+              class="flex lg:text-3xl text-xl capitalize text-main font-bold gap-2 items-end justify-center"
             >
-              Thank you for visiting.
+              Thank you<span class="user-name bg-slate-100 px-2"></span>for
+              visiting.
             </h1>
             <h2
               class="flex lg:text-3xl text-2xl text-gray-700 capitalize font-semibold gap-4 items-end justify-center"
@@ -47,12 +48,16 @@
     </main>
     <script>
       //remove use to logout
+      const user = JSON.parse(localStorage.getItem("user")) || [];
+      const loggedInUser = user[user.length - 1];
+      document.querySelector(".user-name").innerHTML = loggedInUser.name;
+
       document
         .getElementById("logout-btn")
         .addEventListener("click", function () {
           localStorage.removeItem("user"); //remove user when logout
           localStorage.removeItem("cart"); //remove items when logout
-          window.location.href = "login.html";
+          window.location.href = "register.html";
         });
     </script>
   </body>

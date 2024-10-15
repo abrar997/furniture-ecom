@@ -18,7 +18,7 @@
   <body class="bg-slate-100 font-main">
     <main class="login-page">
       <section
-        class="flex flex-col p-4 mt-12 lg:mt-0 lg:h-screen lg:w-[45%] m-auto items-center justify-center my-auto"
+        class="flex flex-col p-4 mt-12 lg:mt-0 lg:h-screen lg:w-[45%] m-auto items-center justify-center"
       >
         <div
           class="rounded grid bg-white p-4 lg:py-20 py-10 w-full shadow lg:gap-6"
@@ -68,29 +68,33 @@
             >
               Send
             </button>
+            <p class="text-red-500 font-semibold text-xl" id="validation"></p>
           </form>
         </div>
       </section>
     </main>
     <script>
-      var loginForm = document.getElementById("login-form");
-      let user = JSON.parse(localStorage.getItem("user"))
+      let AllUsers = JSON.parse(localStorage.getItem("user"))
         ? JSON.parse(localStorage.getItem("user"))
         : [];
+
+      var loginForm = document.getElementById("login-form");
+      var validation = document.getElementById("validation");
       //send data when submit
+
       loginForm.addEventListener("submit", function (e) {
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
-
         e.preventDefault();
-        const user = {
-          email,
-          password,
-        };
-
-        localStorage.setItem("user", JSON.stringify(user));
-        loginForm.reset(); //reset form inputs
-        window.location.href = "index.html"; //render home page after login
+        //to find if user and email exist in local storage after register
+        const user = AllUsers.some(
+          (user) => user.email === email && user.password === password
+        );
+        if (user) {
+          window.location.href = "index.html"; //render home page after login
+        } else {
+          validation.innerHTML = "Email or password incorrect please try again"; //check if email and password correct
+        }
       });
     </script>
   </body>

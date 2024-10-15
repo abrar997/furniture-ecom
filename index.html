@@ -20,8 +20,12 @@
         <i class="fa-solid fa-igloo"></i>
       </a>
       <div
-        class="flex text-black font-semibold lg:text-2xl text-xl lg:gap-10 gap-4 items-center"
+        class="flex text-black font-semibold lg:text-2xl text-xl lg:gap-8 gap-4 items-center"
       >
+        <a href="register.html" class="hover:opacity-85" id="register"
+          >Register</a
+        >
+        <span class="hidden rounded px-2 user-name text-main"></span>
         <a href="login.html" class="hover:opacity-85 rounded" id="login-link"
           >Login</a
         >
@@ -155,10 +159,16 @@
     </footer>
     <script>
       //check if use not login return login page instead of index
+      const user = JSON.parse(localStorage.getItem("user")) || [];
+      const loggedInUser = user[user.length - 1];
       if (!localStorage.getItem("user")) {
-        window.location.href = "./login.html";
+        window.location.href = "./register.html";
         document.getElementById("logout-link").classList.add("hidden"); //to hide logout link
       } else {
+        document.querySelector(".user-name").innerHTML = loggedInUser.name;
+        document.querySelector(".user-name").classList.remove("hidden");
+
+        document.getElementById("register").classList.add("hidden"); //to show logout
         document.getElementById("logout-link").classList.remove("hidden"); //to show logout
         document.getElementById("login-link").classList.add("hidden"); //to hide login link
       }

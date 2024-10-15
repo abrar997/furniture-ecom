@@ -165,10 +165,11 @@
         window.location.href = "./register.html";
         document.getElementById("logout-link").classList.add("hidden"); //to hide logout link
       } else {
-        document.querySelector(".user-name").innerHTML = loggedInUser.name;
+        //add user name to index page in header
         document.querySelector(".user-name").classList.remove("hidden");
+        document.querySelector(".user-name").innerHTML = loggedInUser.name;
 
-        document.getElementById("register").classList.add("hidden"); //to show logout
+        document.getElementById("register").classList.add("hidden");
         document.getElementById("logout-link").classList.remove("hidden"); //to show logout
         document.getElementById("login-link").classList.add("hidden"); //to hide login link
       }
